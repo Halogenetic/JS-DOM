@@ -184,5 +184,39 @@ for (let ntext of bgColor) {
 }
 
 
-Navigate
+// Navigate
+
+// Last Child becomes First Child
+
+    const list = document.querySelector("ol");
+
+    fast = list.lastElementChild
+
+    sleep = list.firstElementChild
+
+    list.insertBefore(fast, sleep)
+
+
+// H2 moves to another section
+
+    const sections = document.querySelectorAll("section")
+
+    htwo = sections[1].firstElementChild
+
+    hthree = sections[2].firstElementChild.firstElementChild
+
+    sections[1].insertBefore(hthree, htwo);
+
+    sections[2].appendChild(htwo);
+
+    stwostart = sections[2].firstElementChild
+
+    sections[2].insertBefore(htwo, stwostart)
+
+// Remove the last section
+
+    const lastsection = Array.from(document.querySelectorAll("section")).pop();
+
+    lastsection.remove()
+
 
