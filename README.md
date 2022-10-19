@@ -22,3 +22,14 @@ As part of the BeCode Brussels 2022/2023 training
 - Change the display
 - Create new elements
 - Moving elements
+- ElementChild (firstElementChild, lastElementChild)
+- insertBefore
+- appendChild
+- Array.from().pop()
+- var.remove()
+- children[]
+- classList.add
+- createElement
+- createTextNode
+- onkeyup
+
