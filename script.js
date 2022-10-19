@@ -246,6 +246,7 @@ for (let ntext of bgColor) {
     dwdiv.appendChild(newdiv)
     newdiv.classList.add("displayedsquare")
     newdiv.classList.add(e.target.classList[1])
+
     newlog = document.createElement("li")
     actionlog.appendChild(newlog)
     newlogtext = document.createTextNode(getElapsedTime()+" Created a new "+e.target.classList[1]+" square")
@@ -264,6 +265,7 @@ for (let ntext of bgColor) {
     const actionSquares = document.querySelectorAll('.actionsquare')
     for (let actionSquare of actionSquares) {
     actionSquare.addEventListener('click', clickOnSquare)
+
     }
 
 
@@ -312,11 +314,29 @@ for (let ntext of bgColor) {
     e.keyCode == 83      
 ) {
 
-    const lastlsquare = Array.from(document.getElementsByClassName("displayedsquare")).pop();
+    const lastsquare = Array.from(document.querySelectorAll('.displayedsquare')).pop();
 
-        lastlsquare.remove()
+        lastsquare.remove()
+        
    
 }
 
+// const lastsquare = Array.from(document.querySelectorAll('.displayedsquare')).pop();
+
+
+
+// lastsquare.addEventListener('click', clickOnSquare1)
+
+// const clickOnSquare1 = (e) => {
+
+//     lastsquare.remove()
+
+
+// }
+
+
+
     
       }
+
+
