@@ -35,5 +35,7 @@ As part of the BeCode Brussels 2022/2023 training
 - addEventListener ('click', 'keyup', 'change')
 - input & input.value
 - visibility (hidden, visible)
-- Multiple conditions if (&& ||)
-
+- Multiple conditions if (&& || !==)
+- childNodes
+- nodeType
+- removeChild()

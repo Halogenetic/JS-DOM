@@ -22,16 +22,16 @@ for (const element of collection) {
 
 // Selectors
 
-var imparray = document.querySelectorAll('.important')
-len = imparray.length
+var implis = document.querySelectorAll('.important')
+len = implis.length
 
 for(i=0; i<len; i++) {
 
-   (imparray[i]).setAttribute('title', 'This is an important item');
+   (implis[i]).setAttribute('title', 'This is an important item');
 
 }
 
-console.log(imparray)
+console.log(implis)
 
 // Alternative
 
@@ -218,7 +218,7 @@ for (let ntext of bgColor) {
 
 // Remove the last section
 
-    const lastsection = Array.from(document.querySelectorAll("section")).pop();
+    const lastsection = lis.from(document.querySelectorAll("section")).pop();
 
     lastsection.remove()
 
@@ -317,7 +317,7 @@ for (let ntext of bgColor) {
     e.keyCode == 83      
 ) {
 
-    const lastsquare = Array.from(document.querySelectorAll('.displayedsquare')).pop();
+    const lastsquare = lis.from(document.querySelectorAll('.displayedsquare')).pop();
 
         lastsquare.remove()
         
@@ -424,3 +424,86 @@ for (let ntext of bgColor) {
     document.body.style.backgroundColor = "black";
     document.body.style.color = "white";
 })
+
+
+
+// Drill
+
+//1
+
+const container = document.querySelector("ul")
+const lis = document.querySelectorAll("li")
+const films = container.childNodes
+var string = "";
+
+for (i = 0; i < films.length; i++) {
+    films.nodeType === 1
+    string = string + films[i].textContent;
+}
+
+console.log(string)
+
+//2
+
+for (i = 0; i < films.length; i++) {
+    films.nodeType === 1
+    if (films[i].textContent == "Fast and Furious") {
+        container.insertBefore(films[i], films[0])
+    }
+}
+
+//3
+
+for (i = 0; i < films.length; i++) {
+    films.nodeType === 1
+    if (films[i].textContent == "Fast and Furious") {
+        const lis = document.querySelectorAll("li")
+        lis[i].classList.add("important")
+    }
+}
+
+//4 & 5
+
+
+const clickli = (e) => {
+    if (e.target.innerText == "Fast and Furious") {
+        alert("The most important franchise ever, the story of DOM(inic) Toretto's family. It's not about car, it's about family.");
+    } else{
+    alert(e.target.innerText);
+}
+}
+
+    for (let liso of films) {
+   liso.addEventListener('click', clickli)}
+
+
+//6
+
+for (i = 0; i < films.length; i++) {
+    films.nodeType === 1
+
+    for (e = 0; e < films.length; e++)
+    if (films[i].textContent == films[e].textContent && films[i] !== films[e]) {
+        container.removeChild(films[e])
+    }
+}
+
+
+// 7
+//     document.body.onkeyup = function(e) {
+//     const lis = document.querySelectorAll("li")
+
+// if (e.key == "r" ||
+//     e.code == "KeyR" ||      
+//     e.keyCode == 82      
+// ) {
+//     function shufflelis(lis) {
+//         for (let i = lis.length - 1; i > 0; i--) {
+//             const j = Math.floor(Math.random() * (i + 1));
+//             [lis[i], lis[j]] = [lis[j], lis[i]];
+//         }
+    
+//         }
+//     }
+
+// }
