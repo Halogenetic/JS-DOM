@@ -1,353 +1,355 @@
 
-console.log(title)
+// console.log(title)
 
-document.title = 'test'
+// document.title = 'test'
 
-document.body.style.backgroundColor = "#FF69B4";
+// document.body.style.backgroundColor = "#FF69B4";
 
-d1 = Math.floor(Math.random() * 255);
-d2 = Math.floor(Math.random() * 255);
-d3 = Math.floor(Math.random() * 255);
+// d1 = Math.floor(Math.random() * 255);
+// d2 = Math.floor(Math.random() * 255);
+// d3 = Math.floor(Math.random() * 255);
 
-randomcolor = "rgb("+d1+","+d2+","+d3+")";
+// randomcolor = "rgb("+d1+","+d2+","+d3+")";
 
-document.body.style.backgroundColor = randomcolor;
+// document.body.style.backgroundColor = randomcolor;
 
-const collection = document.body.children;
+// const collection = document.body.children;
 
-for (const element of collection) {
-    console.log(element);
-  }
+// for (const element of collection) {
+//     console.log(element);
+//   }
 
 
-// Selectors
+// // Selectors
 
-var imparray = document.querySelectorAll('.important')
-len = imparray.length
+// var imparray = document.querySelectorAll('.important')
+// len = imparray.length
 
-for(i=0; i<len; i++) {
+// for(i=0; i<len; i++) {
 
-   (imparray[i]).setAttribute('title', 'This is an important item');
+//    (imparray[i]).setAttribute('title', 'This is an important item');
 
-}
+// }
 
-console.log(imparray)
+// console.log(imparray)
 
-// Alternative
+// // Alternative
 
-const easyway = document.querySelectorAll(".important");
+// const easyway = document.querySelectorAll(".important");
 
-easyway.forEach ((e)=> {
-    e.title = 'This is an important item';
-});
+// easyway.forEach ((e)=> {
+//     e.title = 'This is an important item';
+// });
 
-// Display: none
+// // Display: none
 
-var selectimg = document.querySelectorAll('img')
-imglen = selectimg.length
+// var selectimg = document.querySelectorAll('img')
+// imglen = selectimg.length
 
-for(i=0; i<imglen; i++) {
+// for(i=0; i<imglen; i++) {
 
-    if (selectimg[i].classList == ('important')) {}
-    else {
-       selectimg[i].style.display = "none";
-    }
-}
+//     if (selectimg[i].classList == ('important')) {}
+//     else {
+//        selectimg[i].style.display = "none";
+//     }
+// }
 
-// Alternative
+// // Alternative
 
-var selectimg = document.querySelectorAll('img')
+// var selectimg = document.querySelectorAll('img')
 
-selectimg.forEach ((e)=> {
-    if (e.classList == ('important')) {
+// selectimg.forEach ((e)=> {
+//     if (e.classList == ('important')) {
         
-            } else {
+//             } else {
                 
-               e.style.display = "none";
-            }
-});
+//                e.style.display = "none";
+//             }
+// });
 
 
-// Alternative 2 (for...of loop)
+// // Alternative 2 (for...of loop)
 
-var all_img_elements = document.querySelectorAll('img')
+// var all_img_elements = document.querySelectorAll('img')
 
-for (const element of all_img_elements) {
-    if (element.classList == ('important')) {}
-    else {
-       element.style.display = "none";
-    }
-}
-
-
-// Display p + class
-
-var allpar = document.querySelectorAll('p')
-parlen = allpar.length
-
-for(i=0; i<parlen; i++) {
-
-    if (allpar[i].classList.length == 0) {
-        console.log(allpar[i].innerText)
-    }
-    else {
-       console.log(allpar[i].innerText)
-       console.log (allpar[i].className)
-    }
-}
+// for (const element of all_img_elements) {
+//     if (element.classList == ('important')) {}
+//     else {
+//        element.style.display = "none";
+//     }
+// }
 
 
-allpar.forEach((e)=>{
-    if (e.classList.length == 0){
-        console.log(e.innerText)
-    } else {
-        console.log(e.innerText)
-        console.log (e.className)
-    }
-})
+// // Display p + class
 
-// Random color if no class
+// var allpar = document.querySelectorAll('p')
+// parlen = allpar.length
+
+// for(i=0; i<parlen; i++) {
+
+//     if (allpar[i].classList.length == 0) {
+//         console.log(allpar[i].innerText)
+//     }
+//     else {
+//        console.log(allpar[i].innerText)
+//        console.log (allpar[i].className)
+//     }
+// }
+
+
+// allpar.forEach((e)=>{
+//     if (e.classList.length == 0){
+//         console.log(e.innerText)
+//     } else {
+//         console.log(e.innerText)
+//         console.log (e.className)
+//     }
+// })
+
+// // Random color if no class
 
 
 
 
-var allpar = document.querySelectorAll('p')
-parlen = allpar.length
+// var allpar = document.querySelectorAll('p')
+// parlen = allpar.length
 
-for(i=0; i<parlen; i++) {
+// for(i=0; i<parlen; i++) {
     
-    d1 = Math.floor(Math.random() * 255);
-    d2 = Math.floor(Math.random() * 255);
-    d3 = Math.floor(Math.random() * 255);
+//     d1 = Math.floor(Math.random() * 255);
+//     d2 = Math.floor(Math.random() * 255);
+//     d3 = Math.floor(Math.random() * 255);
 
-randomcolor = "rgb("+d1+","+d2+","+d3+")";
+// randomcolor = "rgb("+d1+","+d2+","+d3+")";
 
-    if (allpar[i].classList.length == 0) {
-               allpar[i].style.color = randomcolor;  
-    }
-}
+//     if (allpar[i].classList.length == 0) {
+//                allpar[i].style.color = randomcolor;  
+//     }
+// }
 
 
 
-allpar.forEach((e)=>{
+// allpar.forEach((e)=>{
     
-    d1 = Math.floor(Math.random() * 255);
-    d2 = Math.floor(Math.random() * 255);
-    d3 = Math.floor(Math.random() * 255);
+//     d1 = Math.floor(Math.random() * 255);
+//     d2 = Math.floor(Math.random() * 255);
+//     d3 = Math.floor(Math.random() * 255);
 
-randomcolor = "rgb("+d1+","+d2+","+d3+")";
-    if (e.classList.length == 0) {
-        e.style.color = randomcolor;  
-}
+// randomcolor = "rgb("+d1+","+d2+","+d3+")";
+//     if (e.classList.length == 0) {
+//         e.style.color = randomcolor;  
+// }
 
-})
-
-
-// Create
-
-var names = ["ben", "diego", "hassan", "estime", "munise", "arseniia"]
-var nalen = names.length
-
-names.sort(() => Math.random() - 0.5);
-
-for (i=0; i<nalen; i++) {
-    var sec = document.createElement("section");
-    var text = document.createTextNode(names[i]);
-    sec.appendChild(text);
-    var element = document.querySelector('article');
-    element.appendChild(sec);
-
-    d1 = Math.floor(Math.random() * 255);
-    d2 = Math.floor(Math.random() * 255);
-    d3 = Math.floor(Math.random() * 255);
-
-    randomcolor = "rgb("+d1+","+d2+","+d3+")";
-
-    sec.style.background = randomcolor;  
-
-}
-
-let bgColor = document.querySelectorAll('section');
-
-for (let ntext of bgColor) {
-    let d1 = Math.floor(Math.random() * 360);
-    let d2 = Math.floor(Math.random() * 100);
-    let d3 = Math.floor(Math.random() * 100);
-    ntext.style.background = 'hsl('+ d1 +','+ d2 +'%,'+ d3 +'%)';
-    if (d3 > 50) {
-        ntext.style.color = 'black';
-    }
-    else if (d3 <= 50) {
-        ntext.style.color = 'white';
-    }
-}
+// })
 
 
-// Navigate
+// // Create
 
-// Last Child becomes First Child
+// var names = ["ben", "diego", "hassan", "estime", "munise", "arseniia"]
+// var nalen = names.length
 
-    const list = document.querySelector("ol");
+// names.sort(() => Math.random() - 0.5);
 
-    fast = list.lastElementChild
+// for (i=0; i<nalen; i++) {
+//     var sec = document.createElement("section");
+//     var text = document.createTextNode(names[i]);
+//     sec.appendChild(text);
+//     var element = document.querySelector('article');
+//     element.appendChild(sec);
 
-    sleep = list.firstElementChild
+//     d1 = Math.floor(Math.random() * 255);
+//     d2 = Math.floor(Math.random() * 255);
+//     d3 = Math.floor(Math.random() * 255);
 
-    list.insertBefore(fast, sleep)
+//     randomcolor = "rgb("+d1+","+d2+","+d3+")";
+
+//     sec.style.background = randomcolor;  
+
+// }
+
+// let bgColor = document.querySelectorAll('section');
+
+// for (let ntext of bgColor) {
+//     let d1 = Math.floor(Math.random() * 360);
+//     let d2 = Math.floor(Math.random() * 100);
+//     let d3 = Math.floor(Math.random() * 100);
+//     ntext.style.background = 'hsl('+ d1 +','+ d2 +'%,'+ d3 +'%)';
+//     if (d3 > 50) {
+//         ntext.style.color = 'black';
+//     }
+//     else if (d3 <= 50) {
+//         ntext.style.color = 'white';
+//     }
+// }
 
 
-// H2 moves to another section
+// // Navigate
 
-    const sections = document.querySelectorAll("section")
+// // Last Child becomes First Child
 
-    htwo = sections[1].firstElementChild
+//     const list = document.querySelector("ol");
 
-    hthree = sections[2].firstElementChild.firstElementChild
+//     fast = list.lastElementChild
 
-    sections[1].insertBefore(hthree, htwo)
+//     sleep = list.firstElementChild
 
-    sthreediv = sections[2].firstElementChild
-
-    sthreediv.appendChild(htwo)
-
-    sthreedivchild = sthreediv.firstElementChild
-
-    sthreediv.insertBefore(htwo, sthreedivchild)
+//     list.insertBefore(fast, sleep)
 
 
+// // H2 moves to another section
 
-// Remove the last section
+//     const sections = document.querySelectorAll("section")
 
-    const lastsection = Array.from(document.querySelectorAll("section")).pop();
+//     htwo = sections[1].firstElementChild
 
-    lastsection.remove()
+//     hthree = sections[2].firstElementChild.firstElementChild
+
+//     sections[1].insertBefore(hthree, htwo)
+
+//     sthreediv = sections[2].firstElementChild
+
+//     sthreediv.appendChild(htwo)
+
+//     sthreedivchild = sthreediv.firstElementChild
+
+//     sthreediv.insertBefore(htwo, sthreedivchild)
 
 
 
+// // Remove the last section
 
-// Events
+//     const lastsection = Array.from(document.querySelectorAll("section")).pop();
 
-    const sections = document.querySelectorAll("section")
-
-    const dwdiv = sections[0]
-
-    const actionlog = sections[2].children[1]
-
-    const _initTime = Date.now()
-
-    const getElapsedTime = () => {
-    return Number((Date.now() - _initTime) / 1000).toFixed(2) + 's'
-    }
-
-    const clickOnSquare = (e) => {
-    console.log(e.target.classList[1])
-    console.log(getElapsedTime())
-    newdiv = document.createElement("div")
-    dwdiv.appendChild(newdiv)
-    newdiv.classList.add("displayedsquare")
-    newdiv.classList.add(e.target.classList[1])
-
-    newlog = document.createElement("li")
-    actionlog.appendChild(newlog)
-    newlogtext = document.createTextNode(getElapsedTime()+" Created a new "+e.target.classList[1]+" square")
-    actionlog.appendChild(newlogtext)
-
-    const allli = document.querySelectorAll("li")
-    const alilen = allli.length
-
-    for (i=0; i<alilen; i++){
-    const lis = sections[2].children[1].children[i]
-    lis.appendChild(newlogtext)
-
-    }
-}
-
-    const actionSquares = document.querySelectorAll('.actionsquare')
-    for (let actionSquare of actionSquares) {
-    actionSquare.addEventListener('click', clickOnSquare)
-
-    }
+//     lastsection.remove()
 
 
-    document.body.onkeyup = function(e) {
-        if (e.key == " " ||
-            e.code == "Space" ||      
-            e.keyCode == 32      
-        ) {
-    d1 = Math.floor(Math.random() * 255);
-    d2 = Math.floor(Math.random() * 255);
-    d3 = Math.floor(Math.random() * 255);
 
-    randomcolor = "rgb("+d1+","+d2+","+d3+")";
 
-    document.body.style.backgroundColor = randomcolor;
+// // Events
 
-    newlog = document.createElement("li")
-    actionlog.appendChild(newlog)
-    newlogtext = document.createTextNode("New Background Color")
-    actionlog.appendChild(newlogtext)
+//     const sections = document.querySelectorAll("section")
 
-    const allli = document.querySelectorAll("li")
-    const alilen = allli.length
+//     const dwdiv = sections[0]
 
-    for (i=0; i<alilen; i++){
-    const lis = sections[2].children[1].children[i]
-    lis.appendChild(newlogtext)
+//     const actionlog = sections[2].children[1]
 
-    }
+//     const _initTime = Date.now()
 
-        }
-        if (e.key == "l" ||
-        e.code == "KeyL" ||      
-        e.keyCode == 76      
-    ) {
+//     const getElapsedTime = () => {
+//     return Number((Date.now() - _initTime) / 1000).toFixed(2) + 's'
+//     }
 
-        const lastli = document.querySelectorAll("li")
-        const lastlilen = lastli.length
+//     const clickOnSquare = (e) => {
+//     console.log(e.target.classList[1])
+//     console.log(getElapsedTime())
+//     newdiv = document.createElement("div")
+//     dwdiv.appendChild(newdiv)
+//     newdiv.classList.add("displayedsquare")
+//     newdiv.classList.add(e.target.classList[1])
 
-        for (i=0; i<lastlilen; i++) {
+//     newlog = document.createElement("li")
+//     actionlog.appendChild(newlog)
+//     newlogtext = document.createTextNode(getElapsedTime()+" Created a new "+e.target.classList[1]+" square")
+//     actionlog.appendChild(newlogtext)
 
-            lastli[i].remove()
-        }
+//     const allli = document.querySelectorAll("li")
+//     const alilen = allli.length
+
+//     for (i=0; i<alilen; i++){
+//     const lis = sections[2].children[1].children[i]
+//     lis.appendChild(newlogtext)
+
+//     }
+// }
+
+//     const actionSquares = document.querySelectorAll('.actionsquare')
+//     for (let actionSquare of actionSquares) {
+//     actionSquare.addEventListener('click', clickOnSquare)
+
+//     }
+
+
+//     document.body.onkeyup = function(e) {
+//         if (e.key == " " ||
+//             e.code == "Space" ||      
+//             e.keyCode == 32      
+//         ) {
+//     d1 = Math.floor(Math.random() * 255);
+//     d2 = Math.floor(Math.random() * 255);
+//     d3 = Math.floor(Math.random() * 255);
+
+//     randomcolor = "rgb("+d1+","+d2+","+d3+")";
+
+//     document.body.style.backgroundColor = randomcolor;
+
+//     newlog = document.createElement("li")
+//     actionlog.appendChild(newlog)
+//     newlogtext = document.createTextNode("New Background Color")
+//     actionlog.appendChild(newlogtext)
+
+//     const allli = document.querySelectorAll("li")
+//     const alilen = allli.length
+
+//     for (i=0; i<alilen; i++){
+//     const lis = sections[2].children[1].children[i]
+//     lis.appendChild(newlogtext)
+
+//     }
+
+//         }
+//         if (e.key == "l" ||
+//         e.code == "KeyL" ||      
+//         e.keyCode == 76      
+//     ) {
+
+//         const lastli = document.querySelectorAll("li")
+//         const lastlilen = lastli.length
+
+//         for (i=0; i<lastlilen; i++) {
+
+//             lastli[i].remove()
+//         }
        
-    }
+//     }
 
-    if (e.key == "s" ||
-    e.code == "KeyS" ||      
-    e.keyCode == 83      
-) {
+//     if (e.key == "s" ||
+//     e.code == "KeyS" ||      
+//     e.keyCode == 83      
+// ) {
 
-    const lastsquare = Array.from(document.querySelectorAll('.displayedsquare')).pop();
+//     const lastsquare = Array.from(document.querySelectorAll('.displayedsquare')).pop();
 
-        lastsquare.remove()
+//         lastsquare.remove()
         
    
-}
+// }
 
 
-      }
+//       }
 
-    const clickOnNewSquare = (e) => {
-    if (e.target.classList.contains("green")){
-    alert("green");
-    }
-    else if (e.target.classList.contains("violet")){
-    alert("violet");
-    }
-    else if (e.target.classList.contains("orange")){
-    alert("orange");
-    }    
-    }
+//     const clickOnNewSquare = (e) => {
+//     if (e.target.classList.contains("green")){
+//     alert("green");
+//     }
+//     else if (e.target.classList.contains("violet")){
+//     alert("violet");
+//     }
+//     else if (e.target.classList.contains("orange")){
+//     alert("orange");
+//     }    
+//     }
 
-    const displayedSquares = document.querySelectorAll(".displayedsquare-wrapper");
-    for (let square of displayedSquares) {
-    square.addEventListener('click', clickOnNewSquare);
-    }
+//     const displayedSquares = document.querySelectorAll(".displayedsquare-wrapper");
+//     for (let square of displayedSquares) {
+//     square.addEventListener('click', clickOnNewSquare);
+//     }
 
 
 
 
 // Forms
+
+//1
 
     const input = document.getElementById('firstname');
     const span = document.getElementById('display-firstname');
@@ -358,7 +360,7 @@ for (let ntext of bgColor) {
 
     input.addEventListener('keyup', spanKey);
 
-
+//2
 
     const input2 = document.getElementById('age');
 
@@ -376,6 +378,49 @@ for (let ntext of bgColor) {
 
     input2.addEventListener('keyup', ageKey);
 
-    
+    //3
 
-//     const input 3 = 
+    const input3 = document.getElementById('pwd');
+    const input4 = document.getElementById('pwd-confirm');
+    const span3 = document.createElement("span")
+    input3.appendChild(span3)
+    const span4 = document.createElement("span")
+    input4.appendChild(span4)
+
+    const pwdKey = () => {
+
+        span3.textContent = input3.value;
+        const chara = span3.textContent.length
+
+        if (chara>5){
+            input3.style.background= "green";
+    
+        } else {
+            input3.style.background= "red";
+            }
+    }
+
+    const pwdcKey = () => {
+
+        span4.textContent = input4.value;
+        const chara2 = span4.textContent.length
+
+        if (span3.textContent == span4.textContent && chara2>5){
+            input4.style.background= "green";
+    
+        } else {
+            input4.style.background= "red";
+    }
+    }
+
+
+    input3.addEventListener('keyup', pwdKey);
+    input4.addEventListener('keyup', pwdcKey);
+
+//4
+
+    const myselect = document.getElementById('toggle-darkmode');
+    myselect.addEventListener('change', function(){
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white";
+})
