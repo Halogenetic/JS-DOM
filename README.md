@@ -32,4 +32,8 @@ As part of the BeCode Brussels 2022/2023 training
 - createElement
 - createTextNode
 - onkeyup
+- addEventListener ('click', 'keyup', 'change')
+- input & input.value
+- visibility (hidden, visible)
+- Multiple conditions if (&& ||)
 
