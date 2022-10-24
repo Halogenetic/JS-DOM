@@ -457,8 +457,7 @@ for (i = 0; i < films.length; i++) {
 for (i = 0; i < films.length; i++) {
     films.nodeType === 1
     if (films[i].textContent == "Fast and Furious") {
-        const lis = document.querySelectorAll("li")
-        lis[i].classList.add("important")
+        films[i].classList.add("important")
     }
 }
 
@@ -489,7 +488,7 @@ for (i = 0; i < films.length; i++) {
 }
 
 
-// 7
+// // 7
 
 body = document.querySelector("body")
 
@@ -505,6 +504,7 @@ const randomClone = (e) => {
   for(i=0; i < films.length; i++) {
      let index = Math.floor(Math.random() * films.length);
      container.appendChild(films[index]);
+     console.log(index)
     }
    for (let element of films) {
       if (element.textContent === "Fast and Furious") {
@@ -524,12 +524,15 @@ body.addEventListener('keyup', randomClone)
 
 // 8
 
+
 mynewdiv = document.createElement("div");
 body.appendChild(mynewdiv)
 body.insertBefore(mynewdiv, body.children[1])
 
 newselect = document.createElement("select");
 mynewdiv.appendChild(newselect)
+newoption3 = document.createElement("option");
+newselect.appendChild(newoption3)
 newoption = document.createElement("option");
 newselect.appendChild(newoption)
 newoptiontext = document.createTextNode("normal franchises")
@@ -542,7 +545,7 @@ newoption2.appendChild(newoptiontext2)
 select = document.querySelector("select")
 
 const selectFr = (e) => {
-    if (select.selectedIndex === 1){
+    if (select.selectedIndex === 2){
     for (let element of lis) {
         if (element.textContent === "Fast and Furious") {
             element.style.visibility = 'visible'
@@ -551,11 +554,23 @@ const selectFr = (e) => {
           }
         }
  }
+
+ else if (select.selectedIndex === 1){
+    for (let element of lis) {
+        if (element.textContent === "Fast and Furious") {
+            element.style.visibility = 'hidden'
+          } else {
+            element.style.visibility = 'visible'
+          }
+        }
+    }
+
+ 
     else if (select.selectedIndex === 0){
         for (let element of lis) {
                 element.style.visibility = 'visible'
             }
-            }
+        }
  }
   
 select.addEventListener('change', selectFr)
