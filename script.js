@@ -443,7 +443,7 @@ for (i = 0; i < films.length; i++) {
 
 console.log(string)
 
-//2
+//2.1 & 2.2
 
 for (i = 0; i < films.length; i++) {
     films.nodeType === 1
@@ -452,7 +452,7 @@ for (i = 0; i < films.length; i++) {
     }
 }
 
-//3
+//2.3
 
 for (i = 0; i < films.length; i++) {
     films.nodeType === 1
@@ -461,7 +461,7 @@ for (i = 0; i < films.length; i++) {
     }
 }
 
-//4 & 5
+//2.4 & 2.5
 
 
 const clickli = (e) => {
@@ -476,7 +476,7 @@ const clickli = (e) => {
    liso.addEventListener('click', clickli)}
 
 
-//6
+//2.6
 
 for (i = 0; i < films.length; i++) {
     films.nodeType === 1
@@ -488,7 +488,7 @@ for (i = 0; i < films.length; i++) {
 }
 
 
-// // 7
+// 3 & 4
 
 body = document.querySelector("body")
 
@@ -522,7 +522,7 @@ const randomClone = (e) => {
 body.addEventListener('keyup', randomClone)
 
 
-// 8
+// 5, 6 & 7
 
 
 mynewdiv = document.createElement("div");
