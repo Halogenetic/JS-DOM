@@ -490,20 +490,72 @@ for (i = 0; i < films.length; i++) {
 
 
 // 7
-//     document.body.onkeyup = function(e) {
-//     const lis = document.querySelectorAll("li")
 
-// if (e.key == "r" ||
-//     e.code == "KeyR" ||      
-//     e.keyCode == 82      
-// ) {
-//     function shufflelis(lis) {
-//         for (let i = lis.length - 1; i > 0; i--) {
-//             const j = Math.floor(Math.random() * (i + 1));
-//             [lis[i], lis[j]] = [lis[j], lis[i]];
-//         }
-    
-//         }
-//     }
+body = document.querySelector("body")
 
-// }
+for (element of films){
+if (element.textContent == "Fast and Furious") {
+var fasty = element}}
+
+const randomClone = (e) => {
+    if (e.key == "r" ||
+    e.code == "KeyR" ||      
+    e.keyCode == 82      
+) {
+  for(i=0; i < films.length; i++) {
+     let index = Math.floor(Math.random() * films.length);
+     container.appendChild(films[index]);
+    }
+   for (let element of films) {
+      if (element.textContent === "Fast and Furious") {
+           container.prepend(element);
+        }
+      }
+  }
+ 
+  else if (e.code == "KeyD") {
+    const fandf = fasty.cloneNode(true);
+    container.prepend(fandf);
+  }
+}
+
+body.addEventListener('keyup', randomClone)
+
+
+// 8
+
+mynewdiv = document.createElement("div");
+body.appendChild(mynewdiv)
+body.insertBefore(mynewdiv, body.children[1])
+
+newselect = document.createElement("select");
+mynewdiv.appendChild(newselect)
+newoption = document.createElement("option");
+newselect.appendChild(newoption)
+newoptiontext = document.createTextNode("normal franchises")
+newoption.appendChild(newoptiontext)
+newoption2 = document.createElement("option");
+newselect.appendChild(newoption2)
+newoptiontext2 = document.createTextNode("important franchises")
+newoption2.appendChild(newoptiontext2)
+
+select = document.querySelector("select")
+
+const selectFr = (e) => {
+    if (select.selectedIndex === 1){
+    for (let element of lis) {
+        if (element.textContent === "Fast and Furious") {
+            element.style.visibility = 'visible'
+          } else {
+            element.style.visibility = 'hidden'
+          }
+        }
+ }
+    else if (select.selectedIndex === 0){
+        for (let element of lis) {
+                element.style.visibility = 'visible'
+            }
+            }
+ }
+  
+select.addEventListener('change', selectFr)
